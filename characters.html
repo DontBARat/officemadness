@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Office Madness - Personnel Files</title>
+    <style>
+        /* Анимация плавного появления страницы */
+        @keyframes pageIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+            animation: pageIn 1s ease-out;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #ff3333;
+            text-shadow: 0 0 15px #ff3333;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+        /* Сетка для карточек персонажей */
+        .char-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto 40px auto;
+            flex-wrap: wrap;
+        }
+        /* Карточка персонажа */
+        .char-card {
+            background: #111;
+            border: 3px solid #00ffcc;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
+            width: 45%;
+            min-width: 300px;
+            padding: 25px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+        .char-name {
+            color: #00ffcc;
+            font-size: 1.6rem;
+            font-weight: bold;
+            border-bottom: 1px dashed #333;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        /* Рамка для твоих PNG картинок */
+        .char-avatar {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border: 2px solid #333;
+            margin-bottom: 15px;
+            background: #000;
+        }
+        .char-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Чтобы рисунок сохранял пропорции и не растягивался */
+        }
+        .char-prop {
+            margin: 8px 0;
+            font-size: 1rem;
+        }
+        .label {
+            color: #888;
+        }
+        .value {
+            color: #fff;
+        }
+        .weapon-box {
+            margin-top: 15px;
+            padding: 10px;
+            background: #1a1a1a;
+            border-left: 3px solid #ff3333;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 10px 30px;
+            font-size: 1.2rem;
+            color: #888;
+            border: 2px solid #888;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            color: #fff;
+            border-color: #fff;
+            box-shadow: 0 0 15px #fff;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>PERSONNEL DOSSIER</h1>
+    <div class="subtitle">SURVIVOR STATUS // CLASSIFIED</div>
+
+    <div class="char-grid">
+        <!-- КАРТОЧКА ДЖЕЙМСА РАЙТЕРА -->
+        <div class="char-card">
+            <div class="char-name">JAMES RITER</div>
+            
+            <div class="char-avatar" style="border-color: #00ffcc;">
+                <img src="james_r.png" alt="James Riter">
+            </div>
+
+            <div class="char-prop"><span class="label">Должность:</span> <span class="value">Старший клерк</span></div>
+            <div class="char-prop"><span class="label">Статус:</span> <span class="value" style="color: #00ff00;">ЖИВ</span></div>
+            <div class="char-prop"><span class="label">Особые навыки:</span> <span class="value">Высокая скорость, тактическое мышление</span></div>
+            
+            <div class="weapon-box">
+                <span class="label" style="color: #ff3333; font-weight: bold;">ОРУЖИЕ ВЫБОРA:</span><br>
+                <span class="value">Тяжелый антистеплер (использует как кастет) и кабели питания.</span>
+            </div>
+        </div>
+
+        <!-- КАРТОЧКА ДЖЕЙМСА КЁРТИСА -->
+        <div class="char-card" style="border-color: #ffe600; box-shadow: 0 0 15px rgba(255, 230, 0, 0.1);">
+            <div class="char-name" style="color: #ffe600;">JAMES CURTIS</div>
+            
+            <div class="char-avatar" style="border-color: #ffe600;">
+                <img src="james_c.png" alt="James Curtis">
+            </div>
+
+            <div class="char-prop"><span class="label">Должность:</span> <span class="value">Младший аналитик</span></div>
+            <div class="char-prop"><span class="label">Статус:</span> <span class="value" style="color: #00ff00;">ЖИВ</span></div>
+            <div class="char-prop"><span class="label">Особые навыки:</span> <span class="value">Грубая сила, знание вентиляции здания</span></div>
+            
+            <div class="weapon-box">
+                <span class="label" style="color: #ff3333; font-weight: bold;">ОРУЖИЕ ВЫБОРA:</span><br>
+                <span class="value">Промышленный дырокол и заточенная стальная линейка.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопка возврата на главную страницу index.html -->
+    <a href="index.html" class="back-btn">Go Back</a>
+
+</body>
+</html>

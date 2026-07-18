@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Office Madness - Monster Logs</title>
+    <style>
+        /* Анимация плавного появления страницы */
+        @keyframes pageIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+            animation: pageIn 1s ease-out;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #ff3333;
+            text-shadow: 0 0 15px #ff3333;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+        /* Сетка для монстров */
+        .monster-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto 40px auto;
+            flex-wrap: wrap;
+        }
+        /* Карточка монстра */
+        .monster-card {
+            background: #111;
+            border: 3px solid #ff3333;
+            box-shadow: 0 0 15px rgba(255, 51, 51, 0.1);
+            width: 45%;
+            min-width: 300px;
+            padding: 25px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+        .monster-name {
+            color: #ff3333;
+            font-size: 1.6rem;
+            font-weight: bold;
+            border-bottom: 1px dashed #333;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        /* Рамка для будущих PNG картинок монстров */
+        .monster-avatar {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border: 2px solid #333;
+            margin-bottom: 15px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .monster-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .placeholder-text {
+            color: #444;
+            font-size: 1rem;
+        }
+        .monster-prop {
+            margin: 8px 0;
+            font-size: 1rem;
+        }
+        .label {
+            color: #888;
+        }
+        .value {
+            color: #fff;
+        }
+        .danger-box {
+            margin-top: 15px;
+            padding: 10px;
+            background: #1a1a1a;
+            border-left: 3px solid #ff3333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>BIOHAZARD REPORT</h1>
+    <div class="subtitle">ENTITY CLASSIFICATION // DO NOT APPROACH</div>
+
+    <div class="monster-grid">
+        <!-- МОНСТР 1: КУЛЕРНЫЙ ПОЛЗУН -->
+        <div class="monster-card">
+            <div class="monster-name">COOLER CREEPER</div>
+            
+            <div class="monster-avatar">
+                <!-- Заглушка. Когда нарисуешь, вставь: <img src="monster_1.png" alt="Cooler Creeper"> -->
+                <span class="placeholder-text">[ АРТ В РАЗРАБОТКЕ ]</span>
+            </div>
+
+            <div class="monster-prop"><span class="label">Тип угрозы:</span> <span class="value">Мутант класса Б</span></div>
+            <div class="monster-prop"><span class="label">Локация:</span> <span class="value">Офисные кухни, коридоры</span></div>
+            <div class="monster-prop"><span class="label">Поведение:</span> <span class="value">Прячется в темноте около кулеров с водой, нападает со спины</span></div>
+            
+            <div class="danger-box">
+                <span class="label" style="color: #ff3333; font-weight: bold;">УЯЗВИМОСТЬ:</span><br>
+                <span class="value">Боится сильных ударов дыроколом по центральному ядру.</span>
+            </div>
+        </div>
+
+        <!-- МОНСТР 2: ПРИНТЕРНЫЙ ДЕМОН -->
+        <div class="monster-card" style="border-color: #ffaa00; box-shadow: 0 0 15px rgba(255, 170, 0, 0.1);">
+            <div class="monster-name" style="color: #ffaa00;">PRINTER DEMON</div>
+            
+            <div class="monster-avatar" style="border-color: #555;">
+                <!-- Заглушка. Когда нарисуешь, вставь: <img src="monster_2.png" alt="Printer Demon"> -->
+                <span class="placeholder-text">[ АРТ В РАЗРАБОТКЕ ]</span>
+            </div>
+
+            <div class="monster-prop"><span class="label">Тип угрозы:</span> <span class="value">Техно-паразит</span></div>
+            <div class="monster-prop"><span class="label">Локация:</span> <span class="value">Копировальные комнаты (12-15 этажи)</span></div>
+            <div class="monster-prop"><span class="label">Поведение:</span> <span class="value">Плюется ядовитыми чернилами и использует провода как щупальца</span></div>
+            
+            <div class="danger-box" style="border-left-color: #ffaa00;">
+                <span class="label" style="color: #ffaa00; font-weight: bold;">УЯЗВИМОСТЬ:</span><br>
+                <span class="value">Кабели питания Кёртиса могут закоротить его внутренние платы.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопка возврата на главную страницу -->
+    <br>
+    <a href="index.html" style="display: inline-block; padding: 10px 30px; font-size: 1.2rem; color: #888; border: 2px solid #888; text-decoration: none; text-transform: uppercase; transition: all 0.3s ease;" onmouseover="this.style.color='#fff'; this.style.borderColor='#fff'; this.style.boxShadow='0 0 15px #fff'; this.style.transform='scale(1.05)'" onmouseout="this.style.color='#888'; this.style.borderColor='#888'; this.style.boxShadow='none'; this.style.transform='scale(1)'">Go Back</a>
+
+</body>
+</html>

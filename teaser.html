@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Office Madness - Teaser</title>
+    <style>
+        /* Анимация плавного появления страницы */
+        @keyframes pageIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+            animation: pageIn 1s ease-out;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #ff3333;
+            text-shadow: 0 0 15px #ff3333;
+            margin-bottom: 30px;
+        }
+        /* Рамка для твоего видео */
+        .video-container {
+            width: 80%;
+            max-width: 800px;
+            height: 450px;
+            background: #111;
+            border: 3px solid #ff3333;
+            box-shadow: 0 0 20px rgba(255, 51, 51, 0.3);
+            margin: 0 auto 40px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Чтобы видео не вылезало за границы рамки */
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 10px 30px;
+            font-size: 1.2rem;
+            color: #888;
+            border: 2px solid #888;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            color: #fff;
+            border-color: #fff;
+            box-shadow: 0 0 15px #fff;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>OFFICE MADNESS - OFFICIAL TEASER</h1>
+
+    <!-- РАБОЧИЙ ПЛЕЕР ВНУТРИ ТВОЕЙ РАМКИ -->
+    <div class="video-container">
+        <video width="100%" height="100%" controls style="object-fit: contain; outline: none; background: #000;">
+            <source src="teaser.mp4" type="video/mp4">
+            Ваш браузер не поддерживает тег видео.
+        </video>
+    </div>
+
+    <!-- Кнопка возврата назад на главную -->
+    <a href="index.html" class="back-btn">Go Back</a>
+
+</body>
+</html>
