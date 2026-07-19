@@ -2,8 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Xavier & The Gang - Official Sheet</title>
+    <title>Xavier & The Gang - Universe Log</title>
     <style>
+        /* Анимация плавного появления страницы */
         @keyframes pageIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -29,62 +30,55 @@
             margin-bottom: 40px;
             letter-spacing: 2px;
         }
-        /* Сетка для карточек персонажей */
-        .char-grid {
+        /* Главный контейнер для общей картинки */
+        .main-showcase {
+            max-width: 950px;
+            background: #111;
+            border: 3px solid #00ff00;
+            box-shadow: 0 0 25px rgba(0, 255, 0, 0.15);
+            margin: 0 auto 40px auto;
+            padding: 15px;
+        }
+        .main-showcase img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #222;
+        }
+        /* Сетка для текстовых досье */
+        .info-grid {
             display: flex;
             justify-content: center;
             gap: 20px;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto 40px auto;
             flex-wrap: wrap;
         }
-        /* Карточка в стиле Саут-Парка */
-        .char-card {
+        .info-card {
             background: #111;
-            border: 3px solid #00ff00;
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
-            width: 22%;
-            min-width: 250px;
+            border-left: 4px solid #00ff00;
+            width: 48%;
+            min-width: 300px;
             padding: 20px;
             text-align: left;
             box-sizing: border-box;
-        }
-        .char-name {
-            color: #00ff00;
-            font-size: 1.4rem;
-            font-weight: bold;
-            border-bottom: 1px dashed #333;
-            padding-bottom: 5px;
             margin-bottom: 15px;
+        }
+        .char-title {
+            color: #ffe600;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
             text-transform: uppercase;
         }
-        .char-avatar {
-            width: 100%;
-            height: 220px;
-            overflow: hidden;
-            border: 2px solid #222;
-            margin-bottom: 15px;
-            background: #000;
-        }
-        .char-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        .char-prop {
-            margin: 6px 0;
+        .char-desc {
             font-size: 0.9rem;
+            color: #ccc;
+            line-height: 1.5;
         }
-        .label { color: #666; }
-        .value { color: #fff; }
-        
-        .fact-box {
-            margin-top: 15px;
-            padding: 8px;
-            background: #161616;
-            border-left: 3px solid #ffe600;
-            font-size: 0.85rem;
-            line-height: 1.4;
+        .highlight {
+            color: #00ff00;
+            font-weight: bold;
         }
         .back-btn {
             display: inline-block;
@@ -107,42 +101,53 @@
 <body>
 
     <h1>XAVIER & THE GANG</h1>
-    <div class="subtitle">CHARACTER MODELS // YEAR: 1989 // AGE: 8</div>
+    <div class="subtitle">PROJECT DOSSIER // TIMELINE ARCHIVE</div>
 
-    <div class="char-grid">
+    <!-- ОБЩАЯ КАРТИНКА СО ВСЕЙ ЧЕТВЕРКОЙ -->
+    <div class="main-showcase">
+        <img src="gang.png" alt="Xavier and the Gang - Official Lineup">
+    </div>
+
+    <!-- ИНФОРМАЦИЯ О ГЕРОЯХ -->
+    <div class="info-grid">
         <!-- 1. ЭКЗЕЙВИЕР -->
-        <div class="char-card">
-            <div class="char-name">Xavier Wilson</div>
-            <div class="char-avatar"><img src="xavier.png" alt="Xavier"></div>
-            <div class="char-prop"><span class="label">Роль:</span> <span class="value">Мозг компашки</span></div>
-            <div class="fact-box">Постоянно бесится и орет капсом, когда тупые друзья мешают ему слушать музыку или неправильно произносят его имя через "X".</div>
+        <div class="info-card">
+            <div class="char-title">> XAVIER WILSON</div>
+            <div class="char-desc">
+                <span class="highlight">В 1989 году (8 лет):</span> Мозг всей банды. Постоянно бесился и орал капсом, когда тупые друзья мешали ему слушать музыку или коверкали его имя. <br>
+                <span class="highlight">Сейчас (Взрослый):</span> Всё такой же нервный и строгий. Пытается контролировать абсурд вокруг, но срывается на крик «SHUT THE FUCK UP!», когда Митчелл орет под ухом во время вечеринок.
+            </div>
         </div>
 
         <!-- 2. МИТЧЕЛЛ -->
-        <div class="char-card" style="border-color: #ffe600; box-shadow: 0 0 15px rgba(255, 230, 0, 0.1);">
-            <div class="char-name" style="color: #ffe600;">Mitchell Hopkins</div>
-            <div class="char-avatar" style="border-color: #ffe600;"><img src="mitchell.png" alt="Mitchell"></div>
-            <div class="char-prop"><span class="label">Роль:</span> <span class="value">Заводила-стиляга</span></div>
-            <div class="fact-box" style="border-left-color: #00ff00;">Гоняет в футболке "Jaz'n" с крутым рокерским зачёсом-коком на голове. Считает себя главным мажором в этой американской глуши.</div>
+        <div class="info-card" style="border-left-color: #ffe600;">
+            <div class="char-title" style="color: #ffe600;">> MITCHELL HOPKINS</div>
+            <div class="char-desc">
+                <span class="highlight">В 1989 году (8 лет):</span> Хитрый мелкий заводила с крутым зачёсом-коком на голове, считавший себя главным мажором американской глуши.<br>
+                <span class="highlight">Сейчас (Взрослый):</span> Гоняет в белой футболке "Jaz'n". Главный фанат дикого и громкого флекса по телефону, способный за секунду довести Экзейвиера до белого каления.
+            </div>
         </div>
 
         <!-- 3. ЭРИК -->
-        <div class="char-card" style="border-color: #ff3333; box-shadow: 0 0 15px rgba(255, 51, 51, 0.1);">
-            <div class="char-name" style="color: #ff3333;">Eric Jarwell</div>
-            <div class="char-avatar" style="border-color: #ff3333;"><img src="eric.png" alt="Eric"></div>
-            <div class="char-prop"><span class="label">Роль:</span> <span class="value">Металлист</span></div>
-            <div class="fact-box" style="border-left-color: #ff3333;">8-летний фанат группы SLAYER с дикой растрёпанной гривой. Готов устроить слэм в любой непонятной ситуации.</div>
+        <div class="info-card" style="border-left-color: #ff3333;">
+            <div class="char-title" style="color: #ff3333;">> ERIC JARWELL</div>
+            <div class="char-desc">
+                <span class="highlight">В 1989 году (8 лет):</span> Мелкий патлатый металлист, фанатеющий от группы SLAYER прямо за школьной партой.<br>
+                <span class="highlight">Сейчас (Взрослый):</span> Превратился в каноничного сурового рокера в каноничной красной футболке Slayer. Слушает тяжелое музло на MTV и плевать хотел на любые чужие споры.
+            </div>
         </div>
 
         <!-- 4. ДЖЕЙ ДИ -->
-        <div class="char-card" style="border-color: #cc00ff; box-shadow: 0 0 15px rgba(204, 0, 255, 0.1);">
-            <div class="char-name" style="color: #cc00ff;">Jay D. Mathafuqa</div>
-            <div class="char-avatar" style="border-color: #cc00ff;"><img src="jay_d.png" alt="Jay D."></div>
-            <div class="char-prop"><span class="label">Роль:</span> <span class="value">Пофигист</span></div>
-            <div class="fact-box" style="border-left-color: #cc00ff;">Чувак с маорийскими корнями и самой угарной причёской. Абсолютно невозмутимый растаман, которому по кайфу любой движ.</div>
+        <div class="info-card" style="border-left-color: #cc00ff;">
+            <div class="char-title" style="color: #cc00ff;">> JAY D. MATHAFUQA</div>
+            <div class="char-desc">
+                <span class="highlight">В 1989 году (8 лет):</span> Расслабленный пацан с маорийскими корнями и странной ошибкой в паспорте, готовый вписаться в любую детскую авантюру.<br>
+                <span class="highlight">Сейчас (Взрослый):</span> Невозмутимый растаман в яркой шапке с сигаретой. Самый спокойный элемент на любой тусовке, флексит на фоне и вообще не парится по жизни.
+            </div>
         </div>
     </div>
 
+    <!-- Кнопка возврата на Projects Hub -->
     <a href="index.html" class="back-btn">Go Back</a>
 
 </body>
