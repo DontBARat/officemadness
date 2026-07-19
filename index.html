@@ -2,9 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Office Madness</title>
+    <title>DONTBARAT - PROJECTS HUB</title>
     <style>
-        /* Анимация плавного появления всей страницы */
         @keyframes flashFade {
             from { opacity: 0; transform: scale(0.95); }
             to { opacity: 1; transform: scale(1); }
@@ -15,103 +14,93 @@
             font-family: 'Courier New', Courier, monospace;
             text-align: center;
             margin: 0;
-            padding: 50px;
+            padding: 40px;
             animation: flashFade 1.2s ease-out;
         }
         h1 {
-            font-size: 3.5rem;
-            color: #ff3333;
-            text-shadow: 0 0 20px #ff3333, 2px 2px #000;
+            font-size: 3rem;
+            color: #ffffff;
+            text-shadow: 0 0 10px #ffffff;
             letter-spacing: 5px;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.2rem;
-            color: #888;
             margin-bottom: 50px;
-            letter-spacing: 2px;
         }
-        /* Общие базовые стили для всех неоновых кнопок */
+        /* Сетка для двух миров */
+        .hub-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        /* Карточка франшизы */
+        .project-block {
+            background: #111;
+            border: 4px solid #333;
+            width: 45%;
+            min-width: 320px;
+            padding: 30px;
+            box-sizing: border-box;
+            transition: all 0.4s ease;
+        }
+        
+        /* Стилизация стороны OFFICE MADNESS */
+        .om-block { border-color: #ff3333; box-shadow: 0 0 15px rgba(255, 51, 51, 0.1); }
+        .om-block:hover { box-shadow: 0 0 35px #ff3333; transform: translateY(-5px); }
+        .om-title { color: #ff3333; font-size: 2rem; font-weight: bold; text-shadow: 0 0 15px #ff3333; margin-bottom: 20px; }
+        
+        /* Стилизация стороны XAVIER & GANG */
+        .xv-block { border-color: #00ff00; box-shadow: 0 0 15px rgba(0, 255, 0, 0.1); }
+        .xv-block:hover { box-shadow: 0 0 35px #00ff00; transform: translateY(-5px); }
+        .xv-title { color: #00ff00; font-size: 2rem; font-weight: bold; text-shadow: 0 0 15px #00ff00; margin-bottom: 20px; }
+
+        .project-desc { color: #888; font-size: 1rem; line-height: 1.5; margin-bottom: 35px; height: 60px; }
+        
+        /* Кнопки управления */
         .flash-btn {
             display: inline-block;
-            padding: 15px 40px;
-            font-size: 1.2rem;
+            padding: 12px 25px;
+            font-size: 1rem;
             font-weight: bold;
-            color: #00ffcc;
             background: transparent;
-            border: 3px solid #00ffcc;
             cursor: pointer;
             text-decoration: none;
             text-transform: uppercase;
-            box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin: 5px;
+            transition: all 0.3s ease;
         }
-        /* Общий эффект наведения (увеличение и наклон как во Flash) */
-        .flash-btn:hover {
-            color: #0b0b0b;
-            background-color: #00ffcc;
-            box-shadow: 0 0 30px #00ffcc;
-            transform: scale(1.1) rotate(-2deg);
-        }
-        /* Контейнер, удерживающий все четыре кнопки в красивой сетке */
-        .btn-container {
-            margin-top: 50px; 
-            display: flex; 
-            justify-content: center; 
-            gap: 20px; 
-            flex-wrap: wrap;
-            max-width: 1100px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+        .om-btn { color: #00ffcc; border: 2px solid #00ffcc; }
+        .om-btn:hover { color: #000; background: #00ffcc; box-shadow: 0 0 20px #00ffcc; }
         
-        /* 1. Настройки для желтой кнопки лога */
-        .lore-btn {
-            color: #ffe600; 
-            border-color: #ffe600; 
-            box-shadow: 0 0 10px rgba(255, 230, 0, 0.2);
-        }
-        .lore-btn:hover {
-            background-color: #ffe600;
-            box-shadow: 0 0 30px #ffe600;
-        }
-
-        /* 2. Настройки для фиолетовой кнопки персонажей */
-        .char-btn {
-            color: #cc00ff; 
-            border-color: #cc00ff; 
-            box-shadow: 0 0 10px rgba(204, 0, 255, 0.2);
-        }
-        .char-btn:hover {
-            background-color: #cc00ff;
-            box-shadow: 0 0 30px #cc00ff;
-        }
-
-        /* 3. Настройки для красной кнопки бестиария */
-        .bestiary-btn {
-            color: #ff3333; 
-            border-color: #ff3333; 
-            box-shadow: 0 0 10px rgba(255, 51, 51, 0.2);
-        }
-        .bestiary-btn:hover {
-            background-color: #ff3333;
-            box-shadow: 0 0 30px #ff3333;
-        }
+        .xv-btn { color: #ffe600; border: 2px solid #ffe600; }
+        .xv-btn:hover { color: #000; background: #ffe600; box-shadow: 0 0 20px #ffe600; }
     </style>
 </head>
 <body>
 
-    <h1>OFFICE MADNESS</h1>
-    <p>WELCOME TO THE INSANITY. ANIMATION SERIES COMING SOON.</p>
+    <h1>CHOOSE YOUR UNIVERSE</h1>
     
-    <!-- СЕТКА ИЗ ЧЕТЫРЕХ КНОПОК -->
-    <div class="btn-container">
-        <a href="teaser.html" class="flash-btn">WATCH TEASER</a>
-        <a href="lore.html" class="flash-btn lore-btn">LORE & LOGS</a>
-        <a href="characters.html" class="flash-btn char-btn">CHARACTERS</a>
-        <a href="bestiary.html" class="flash-btn bestiary-btn">BESTIARY</a>
+    <div class="hub-container">
+        <!-- БЛОК ПЕРВЫЙ: OFFICE MADNESS -->
+        <div class="project-block om-block">
+            <div class="om-title">OFFICE MADNESS</div>
+            <div class="project-desc">Нью-Йорк. 19 этажей безумия в Tenma Enterprise. Клерки против нечисти под тяжелый металл.</div>
+            
+            <a href="teaser.html" class="flash-btn om-btn">Teaser</a>
+            <a href="lore.html" class="flash-btn om-btn">Lore</a>
+            <a href="characters.html" class="flash-btn om-btn">Heroes</a>
+            <a href="bestiary.html" class="flash-btn om-btn">Monsters</a>
+        </div>
+
+        <!-- БЛОК ВТОРОЙ: XAVIER & THE GANG -->
+        <div class="project-block xv-block">
+            <div class="xv-title">XAVIER & GANG</div>
+            <div class="project-desc">1989 год. Четверо 8-летних пацанов выживают в глухой заднице Америки. Вайб Саут-Парка и Slayer.</div>
+            
+            <!-- Сюда в будущем можно привязать страницы твоего нового мульта -->
+            <a href="#" class="flash-btn xv-btn" onclick="alert('Сюжет в разработке! Эрик слушает Slayer, не мешайте.')">ENTER 1989</a>
+        </div>
     </div>
 
 </body>
 </html>
-
