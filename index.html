@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>DONTBARAT - PROJECTS HUB</title>
     <style>
+        /* Анимация плавного появления всей страницы */
         @keyframes flashFade {
             from { opacity: 0; transform: scale(0.95); }
             to { opacity: 1; transform: scale(1); }
@@ -24,7 +25,7 @@
             letter-spacing: 5px;
             margin-bottom: 50px;
         }
-        /* Сетка для двух миров */
+        /* Сетка для двух вселенных */
         .hub-container {
             display: flex;
             justify-content: center;
@@ -45,18 +46,48 @@
         }
         
         /* Стилизация стороны OFFICE MADNESS */
-        .om-block { border-color: #ff3333; box-shadow: 0 0 15px rgba(255, 51, 51, 0.1); }
-        .om-block:hover { box-shadow: 0 0 35px #ff3333; transform: translateY(-5px); }
-        .om-title { color: #ff3333; font-size: 2rem; font-weight: bold; text-shadow: 0 0 15px #ff3333; margin-bottom: 20px; }
+        .om-block { 
+            border-color: #ff3333; 
+            box-shadow: 0 0 15px rgba(255, 51, 51, 0.1); 
+        }
+        .om-block:hover { 
+            box-shadow: 0 0 35px #ff3333; 
+            transform: translateY(-5px); 
+        }
+        .om-title { 
+            color: #ff3333; 
+            font-size: 2rem; 
+            font-weight: bold; 
+            text-shadow: 0 0 15px #ff3333; 
+            margin-bottom: 20px; 
+        }
         
         /* Стилизация стороны XAVIER & GANG */
-        .xv-block { border-color: #00ff00; box-shadow: 0 0 15px rgba(0, 255, 0, 0.1); }
-        .xv-block:hover { box-shadow: 0 0 35px #00ff00; transform: translateY(-5px); }
-        .xv-title { color: #00ff00; font-size: 2rem; font-weight: bold; text-shadow: 0 0 15px #00ff00; margin-bottom: 20px; }
+        .xv-block { 
+            border-color: #00ff00; 
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.1); 
+        }
+        .xv-block:hover { 
+            box-shadow: 0 0 35px #00ff00; 
+            transform: translateY(-5px); 
+        }
+        .xv-title { 
+            color: #00ff00; 
+            font-size: 2rem; 
+            font-weight: bold; 
+            text-shadow: 0 0 15px #00ff00; 
+            margin-bottom: 20px; 
+        }
 
-        .project-desc { color: #888; font-size: 1rem; line-height: 1.5; margin-bottom: 35px; height: 60px; }
+        .project-desc { 
+            color: #888; 
+            font-size: 1rem; 
+            line-height: 1.5; 
+            margin-bottom: 35px; 
+            height: 60px; 
+        }
         
-        /* Кнопки управления */
+        /* Настройки неоновых кнопок управления */
         .flash-btn {
             display: inline-block;
             padding: 12px 25px;
@@ -69,11 +100,25 @@
             margin: 5px;
             transition: all 0.3s ease;
         }
-        .om-btn { color: #00ffcc; border: 2px solid #00ffcc; }
-        .om-btn:hover { color: #000; background: #00ffcc; box-shadow: 0 0 20px #00ffcc; }
+        .om-btn { 
+            color: #00ffcc; 
+            border: 2px solid #00ffcc; 
+        }
+        .om-btn:hover { 
+            color: #000; 
+            background: #00ffcc; 
+            box-shadow: 0 0 20px #00ffcc; 
+        }
         
-        .xv-btn { color: #ffe600; border: 2px solid #ffe600; }
-        .xv-btn:hover { color: #000; background: #ffe600; box-shadow: 0 0 20px #ffe600; }
+        .xv-btn { 
+            color: #ffe600; 
+            border: 2px solid #ffe600; 
+        }
+        .xv-btn:hover { 
+            color: #000; 
+            background: #ffe600; 
+            box-shadow: 0 0 20px #ffe600; 
+        }
     </style>
 </head>
 <body>
@@ -97,8 +142,8 @@
             <div class="xv-title">XAVIER & GANG</div>
             <div class="project-desc">1989 год. Четверо 8-летних пацанов выживают в глухой заднице Америки. Вайб Саут-Парка и Slayer.</div>
             
-            <!-- Сюда в будущем можно привязать страницы твоего нового мульта -->
-            <a href="#" class="flash-btn xv-btn" onclick="alert('Сюжет в разработке! Эрик слушает Slayer, не мешайте.')">ENTER 1989</a>
+            <!-- Кнопка ведет прямо на страницу персонажей 1989 -->
+            <a href="xavier.html" class="flash-btn xv-btn">ENTER 1989</a>
         </div>
     </div>
 
