@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>DONTBARAT - PROJECTS HUB</title>
     <style>
-        /* Анимация плавного появления всей страницы */
+        /* Smooth page fade-in animation for the whole layout */
         @keyframes flashFade {
             from { opacity: 0; transform: scale(0.95); }
             to { opacity: 1; transform: scale(1); }
@@ -25,7 +25,7 @@
             letter-spacing: 5px;
             margin-bottom: 50px;
         }
-        /* Сетка для двух вселенных */
+        /* Grid container for both universes */
         .hub-container {
             display: flex;
             justify-content: center;
@@ -34,7 +34,7 @@
             margin: 0 auto;
             flex-wrap: wrap;
         }
-        /* Карточка франшизы */
+        /* Franchise project block card */
         .project-block {
             background: #111;
             border: 4px solid #333;
@@ -45,7 +45,7 @@
             transition: all 0.4s ease;
         }
         
-        /* Стилизация стороны OFFICE MADNESS */
+        /* OFFICE MADNESS block styling */
         .om-block { 
             border-color: #ff3333; 
             box-shadow: 0 0 15px rgba(255, 51, 51, 0.1); 
@@ -62,7 +62,7 @@
             margin-bottom: 20px; 
         }
         
-        /* Стилизация стороны XAVIER & GANG */
+        /* XAVIER & GANG block styling */
         .xv-block { 
             border-color: #00ff00; 
             box-shadow: 0 0 15px rgba(0, 255, 0, 0.1); 
@@ -87,7 +87,7 @@
             height: 60px; 
         }
         
-        /* Настройки неоновых кнопок управления */
+        /* Neon control button setup */
         .flash-btn {
             display: inline-block;
             padding: 12px 25px;
@@ -126,10 +126,10 @@
     <h1>CHOOSE YOUR UNIVERSE</h1>
     
     <div class="hub-container">
-        <!-- БЛОК ПЕРВЫЙ: OFFICE MADNESS -->
+        <!-- FIRST BLOCK: OFFICE MADNESS -->
         <div class="project-block om-block">
             <div class="om-title">OFFICE MADNESS</div>
-            <div class="project-desc">Нью-Йорк. 19 этажей безумия в Tenma Enterprise. Клерки против нечисти под тяжелый металл.</div>
+            <div class="project-desc">New York. 19 floors of absolute madness inside Tenma Enterprise. Clerks vs. evil spirits driven by heavy metal.</div>
             
             <a href="teaser.html" class="flash-btn om-btn">Teaser</a>
             <a href="lore.html" class="flash-btn om-btn">Lore</a>
@@ -137,12 +137,12 @@
             <a href="bestiary.html" class="flash-btn om-btn">Monsters</a>
         </div>
 
-        <!-- БЛОК ВТОРОЙ: XAVIER & THE GANG -->
+        <!-- SECOND BLOCK: XAVIER & THE GANG -->
         <div class="project-block xv-block">
             <div class="xv-title">XAVIER & GANG</div>
-            <div class="project-desc">1989 год. Четверо 8-летних пацанов выживают в глухой заднице Америки. Вайб Саут-Парка и Slayer.</div>
+            <div class="project-desc">1989. Four 8-year-old kids surviving in the absolute middle of nowhere, America. South Park meets Slayer vibes.</div>
             
-            <!-- Кнопка ведет прямо на страницу персонажей 1989 -->
+            <!-- Button leads straight to the 1989 character page -->
             <a href="xavier.html" class="flash-btn xv-btn">ENTER 1989</a>
         </div>
     </div>
