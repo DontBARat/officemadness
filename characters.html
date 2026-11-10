@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Office Madness - Personnel Files</title>
     <style>
-        /* Анимация плавного появления страницы */
+        /* Smooth page fade-in animation */
         @keyframes pageIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -30,7 +30,7 @@
             margin-bottom: 40px;
             letter-spacing: 2px;
         }
-        /* Сетка для карточек персонажей */
+        /* Grid for character cards */
         .char-grid {
             display: flex;
             justify-content: center;
@@ -39,7 +39,7 @@
             margin: 0 auto 40px auto;
             flex-wrap: wrap;
         }
-        /* Карточка персонажа */
+        /* Character card */
         .char-card {
             background: #111;
             border: 3px solid #00ffcc;
@@ -58,7 +58,7 @@
             padding-bottom: 5px;
             margin-bottom: 15px;
         }
-        /* Рамка для твоих PNG картинок */
+        /* Frame for PNG images */
         .char-avatar {
             width: 100%;
             height: 250px;
@@ -70,7 +70,7 @@
         .char-avatar img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Чтобы рисунок сохранял пропорции и не растягивался */
+            object-fit: contain; /* Keeps image proportions without stretching */
         }
         .char-prop {
             margin: 8px 0;
@@ -112,7 +112,7 @@
     <div class="subtitle">SURVIVOR STATUS // CLASSIFIED</div>
 
     <div class="char-grid">
-        <!-- КАРТОЧКА ДЖЕЙМСА РАЙТЕРА -->
+        <!-- JAMES RITER CARD -->
         <div class="char-card">
             <div class="char-name">JAMES RITER</div>
             
@@ -120,17 +120,17 @@
                 <img src="james_r.png" alt="James Riter">
             </div>
 
-            <div class="char-prop"><span class="label">Должность:</span> <span class="value">Старший клерк</span></div>
-            <div class="char-prop"><span class="label">Статус:</span> <span class="value" style="color: #00ff00;">ЖИВ</span></div>
-            <div class="char-prop"><span class="label">Особые навыки:</span> <span class="value">Высокая скорость, тактическое мышление</span></div>
+            <div class="char-prop"><span class="label">Position:</span> <span class="value">Senior Clerk</span></div>
+            <div class="char-prop"><span class="label">Status:</span> <span class="value" style="color: #00ff00;">ALIVE</span></div>
+            <div class="char-prop"><span class="label">Special Skills:</span> <span class="value">High speed, tactical thinking</span></div>
             
             <div class="weapon-box">
-                <span class="label" style="color: #ff3333; font-weight: bold;">ОРУЖИЕ ВЫБОРA:</span><br>
-                <span class="value">Тяжелый антистеплер (использует как кастет) и кабели питания.</span>
+                <span class="label" style="color: #ff3333; font-weight: bold;">WEAPON OF CHOICE:</span><br>
+                <span class="value">Heavy staple remover (used as brass knuckles) and power cables.</span>
             </div>
         </div>
 
-        <!-- КАРТОЧКА ДЖЕЙМСА КЁРТИСА -->
+        <!-- JAMES CURTIS CARD -->
         <div class="char-card" style="border-color: #ffe600; box-shadow: 0 0 15px rgba(255, 230, 0, 0.1);">
             <div class="char-name" style="color: #ffe600;">JAMES CURTIS</div>
             
@@ -138,19 +138,20 @@
                 <img src="james_c.png" alt="James Curtis">
             </div>
 
-            <div class="char-prop"><span class="label">Должность:</span> <span class="value">Младший аналитик</span></div>
-            <div class="char-prop"><span class="label">Статус:</span> <span class="value" style="color: #00ff00;">ЖИВ</span></div>
-            <div class="char-prop"><span class="label">Особые навыки:</span> <span class="value">Грубая сила, знание вентиляции здания</span></div>
+            <div class="char-prop"><span class="label">Position:</span> <span class="value">Junior Analyst</span></div>
+            <div class="char-prop"><span class="label">Status:</span> <span class="value" style="color: #00ff00;">ALIVE</span></div>
+            <div class="char-prop"><span class="label">Special Skills:</span> <span class="value">Brute force, knowledge of building ventilation</span></div>
             
             <div class="weapon-box">
-                <span class="label" style="color: #ff3333; font-weight: bold;">ОРУЖИЕ ВЫБОРA:</span><br>
-                <span class="value">Промышленный дырокол и заточенная стальная линейка.</span>
+                <span class="label" style="color: #ff3333; font-weight: bold;">WEAPON OF CHOICE:</span><br>
+                <span class="value">Industrial hole puncher and a sharpened steel ruler.</span>
             </div>
         </div>
     </div>
 
-    <!-- Кнопка возврата на главную страницу index.html -->
+    <!-- Return button to the main page index.html -->
     <a href="index.html" class="back-btn">Go Back</a>
 
 </body>
 </html>
+
